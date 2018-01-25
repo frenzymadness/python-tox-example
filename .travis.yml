@@ -1,0 +1,24 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker pull frenzymadness/fedora-python-tox
+  - docker images
+
+script:
+  - docker run --rm -it -v $PWD:/src -w /src -e TOXENV frenzymadness/fedora-python-tox
+
+matrix:
+  include:
+  - env: TOXENV=py26
+  - env: TOXENV=py27
+  - env: TOXENV=py33
+  - env: TOXENV=py34
+  - env: TOXENV=py35
+  - env: TOXENV=py36
+  - env: TOXENV=py37
+  - env: TOXENV=pypy
+  - env: TOXENV=pypy3
+  - env: TOXENV=jython
