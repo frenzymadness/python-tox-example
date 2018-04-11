@@ -6,3 +6,4 @@ def fac(n):
         return 1
     else:
         return n * fac(n - 1)
+    print()
