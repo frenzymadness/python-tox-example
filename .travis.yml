@@ -20,3 +20,6 @@ matrix:
   - env: TOXENV=pypy
   - env: TOXENV=pypy3
   - env: TOXENV=jython
+  allow_failures:
+  # Jython is not compatible with the latest Python libraries like pip/virtualenv/tox etc.
+  - env: TOXENV=jython
