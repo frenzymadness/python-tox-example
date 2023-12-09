@@ -22,5 +22,4 @@ matrix:
   - env: TOXENV=py312
   - env: TOXENV=py313
   - env: TOXENV=pypy
-  - env: TOXENV=pypy38
   - env: TOXENV=pypy39
